@@ -1,6 +1,6 @@
 services:
   archiva:
-    image: xetusoss/archiva:2.2.10
+    image: xetusoss/archiva:v2.2.10
     container_name: archiva
     restart: unless-stopped
     user: "1000:1000"  # Use unprivileged user for security
