@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   archiva:
     image: xetusoss/archiva:2.2.10
