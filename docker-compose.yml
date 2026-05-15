@@ -115,6 +115,7 @@ services:
     tmpfs:
       - /tmp
       - /var/cache/nginx
+      - /run
 
 volumes:
   archiva-data:
