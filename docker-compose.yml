@@ -80,6 +80,9 @@ services:
       - proxy-net
     security_opt:
       - no-new-privileges:true
+    tmpfs:
+      - /tmp
+      - /run
 
   nginx:
     image: nginx:1.28-alpine
@@ -91,8 +94,7 @@ services:
       - "443:443"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      # Uncomment for SSL certificates
-      - ./ssl:/etc/nginx/ssl:ro
+      - /etc/letsencrypt/live/archiva.noortakafulonline.com:/etc/letsencrypt/live/archiva.noortakafulonline.com:ro
       - nginx_logs:/var/log/nginx
     logging:
       driver: "json-file"
