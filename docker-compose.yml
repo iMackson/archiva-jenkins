@@ -122,7 +122,8 @@ services:
 
     environment:
       - JAVA_OPTS=-Djenkins.install.runSetupWizard=false -Xmx1536m -Xms512m
-      - JENKINS_OPTS=--prefix=/jenkins
+      # - JENKINS_OPTS=--prefix=/jenkins
+      - JENKINS_OPTS=--prefix=/
       - TZ=UTC
 
     mem_limit: 2048m
